@@ -48,10 +48,10 @@ public class FlightBookingTest extends BaseClass {
 		 index.EnteringDestination();
 		 index.Selectdepaturedate();
 		 index.Selectreturndate();
-//		 index.ClickonSearchButton();
-//
-//		 SearchResultPage searchresultpage=new SearchResultPage(driver);
-//		 searchresultpage.clickOnBookBtn();
+		 index.ClickonSearchButton();
+
+		 SearchResultPage searchresultpage=new SearchResultPage(driver);
+		 searchresultpage.clickOnBookBtn();
 // 		 
 //		 FlightReviewPage flightreviewpage=new FlightReviewPage(driver);
 //		 flightreviewpage.SelectSecureTravelProection();
