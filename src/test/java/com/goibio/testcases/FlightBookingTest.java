@@ -1,6 +1,8 @@
 package com.goibio.testcases;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -28,20 +30,6 @@ public class FlightBookingTest extends BaseClass {
 	
 	@Test()
 	public void flightbooking() throws InterruptedException {
-		//driver.findElement(By.xpath("//li[@class='active']/a")).click();
-//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//		Thread.sleep(1000l);
-//		WebDriverWait d=new WebDriverWait(driver,20);
-//		d.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='roundTrip']")));
-//		
-//		driver.findElement(By.xpath("//span[@id='roundTrip']")).click();
-//		driver.findElement(By.id("gosuggest_inputSrc")).sendKeys("del");
-//		driver.findElement(By.id("gosuggest_inputSrc")).sendKeys(Keys.ARROW_DOWN);
-//		driver.findElement(By.id("gosuggest_inputSrc")).sendKeys(Keys.ENTER);
-//		Thread.sleep(5000l);
-//		driver.findElement(By.id("gosuggest_inputDest")).sendKeys("bom");
-//		driver.findElement(By.id("gosuggest_inputDest")).sendKeys(Keys.ARROW_DOWN);
-//		driver.findElement(By.id("gosuggest_inputDest")).sendKeys(Keys.ENTER);
 		 IndexPage index=new IndexPage(driver);
 		 index.clickOnRoundTrip();	
 		 index.Enteringsource();
@@ -49,29 +37,25 @@ public class FlightBookingTest extends BaseClass {
 		 index.Selectdepaturedate();
 		 index.Selectreturndate();
 		 index.ClickonSearchButton();
-
+		 Thread.sleep(10000l);	
+		 
 		 SearchResultPage searchresultpage=new SearchResultPage(driver);
 		 searchresultpage.clickOnBookBtn();
-// 		 
-//		 FlightReviewPage flightreviewpage=new FlightReviewPage(driver);
-//		 flightreviewpage.SelectSecureTravelProection();
-//		 flightreviewpage.EnteringTravellDetails();
-//		 //Thread.sleep(30000l);
-//		 flightreviewpage.clickOnProceedBtn();
-//		 FlightPaymentPage flightpaymentpage=new FlightPaymentPage(driver); 
-//		 flightpaymentpage.ClickOnCovid19pop();
-//		 flightreviewpage.clickOnProceedToPaymentBtn();
-//		 //Thread.sleep(10000l);
-//		 flightpaymentpage.clickOnWallets();
-//		// Thread.sleep(5000l);
-//		 flightpaymentpage.clickOnPayNow();	 
-	}
-	     
+		 
+		 FlightReviewPage flightreviewpage=new FlightReviewPage(driver);
+		 flightreviewpage.SelectSecureTravelProection();
+		 flightreviewpage.EnteringTravellDetails();
+		 flightreviewpage.clickOnProceedBtn();
 	
+		 FlightPaymentPage flightpaymentpage=new FlightPaymentPage(driver); 
+		 flightpaymentpage.ClickOnCovid19pop();
+		 flightreviewpage.clickOnProceedToPaymentBtn();
+		 flightpaymentpage.clickOnWallets();
+	//	 flightpaymentpage.clickOnPayNow();	 
+	}
+	     	
 //		@AfterMethod()
 //		public void teardown() {
 //			driver.quit();
 //		}
 	}
-	
-

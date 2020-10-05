@@ -1,5 +1,7 @@
 package com.goibio.pageobjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,14 +14,24 @@ public class IndexPage {
 	public WebDriver driver;
 	PageBase pagebase;
 	
-	String DepatureDate="20200928";
-	String ReturnDate="20200929";
+	
 	String Scriptvaluescr="return document.getElementById(\"gosuggest_inputSrc\").value;";
 	String Scriptvaluedes="return document.getElementById(\"gosuggest_inputDest\").value;";
-
-
+	String DepartureDate="9 November 2020";
+	String ReturnDate="11 November 2020";
+	
 	@FindBy(xpath="//li[@class='active']/a")
 	WebElement filghts;
+	
+	@FindBy(css="[class='DayPicker-Caption']")
+	WebElement months;
+	
+	@FindBy(css="[class='DayPicker-NavButton DayPicker-NavButton--next']")
+	WebElement nextbtns;
+	
+	@FindBy(css="[class='calDate']")
+	List<WebElement> date;
+	
 	
 	@FindBy(xpath="//span[@id='roundTrip']")
 	WebElement roundTrip;
@@ -32,13 +44,9 @@ public class IndexPage {
 	
 	@FindBy(id="departureCalendar")
 	WebElement depcalender;
-
-	By DepaDate=By.id("fare_"+DepatureDate);
 		
 	@FindBy(id="returnCalendar")
 	WebElement returncal;
-
-	By Returndate=By.id("fare_"+ReturnDate);
 	
 	@FindBy(id="gi_search_btn")
 	WebElement searchbtn;
@@ -74,17 +82,35 @@ public class IndexPage {
 	
 	public void Selectdepaturedate() throws InterruptedException {
 		depcalender.click();
-		driver.findElement(DepaDate).click();
-		
+		pagebase=new PageBase(driver);
+		pagebase.DatePicker(months,nextbtns,date,DepartureDate);
 	}
 	
-	public void Selectreturndate() {
+	public void Selectreturndate() throws InterruptedException {
 		returncal.click();
-		driver.findElement(Returndate).click();
+		pagebase=new PageBase(driver);
+		pagebase.DatePicker(months,nextbtns,date,ReturnDate);
 	}
 	
 	public void ClickonSearchButton() throws InterruptedException {
 		searchbtn.click();
-	}
+	/*	try {
+			String alertmsg = driver.findElement(By.xpath("//span[@class='status_cont red ico13']")).getText();
+			if (alertmsg.contains("Please enter a valid Source")) {
+			    System.out.println("Enter Valid Source");
+			}
+			else if (alertmsg.contains("Please enter a valid Destination")) {
+			    System.out.println("Enter Valid Destination");
+			}
+			else if (alertmsg.contains("Please enter a valid departure date")) {
+			    System.out.println("Enter Valid departure date");
+			}				         
+		}
+		catch (Exception e) {
+			System.out.println(e);			
+	      }
+		
+	}*/
 	
+}
 }

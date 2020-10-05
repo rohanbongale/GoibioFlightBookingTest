@@ -39,6 +39,8 @@ public class FlightPaymentPage {
 	}
 
 	public void ClickOnCovid19pop() {
+		WebDriverWait w=new WebDriverWait(driver,30);
+		w.until(ExpectedConditions.elementToBeClickable(OkBtn));
 		OkBtn.click();
 	}
 	
