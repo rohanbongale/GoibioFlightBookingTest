@@ -94,7 +94,7 @@ public class IndexPage {
 	
 	public void ClickonSearchButton() throws InterruptedException {
 		searchbtn.click();
-	/*	try {
+		try {
 			String alertmsg = driver.findElement(By.xpath("//span[@class='status_cont red ico13']")).getText();
 			if (alertmsg.contains("Please enter a valid Source")) {
 			    System.out.println("Enter Valid Source");
@@ -108,9 +108,7 @@ public class IndexPage {
 		}
 		catch (Exception e) {
 			System.out.println(e);			
-	      }
-		
-	}*/
+	      }		
+	}
 	
-}
 }
