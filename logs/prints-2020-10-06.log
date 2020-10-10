@@ -1,0 +1,5 @@
+21:36:12.420 [main] INFO  com.goibio.testcases.FlightBookingTest - Successfully Entered Source Value
+21:36:18.369 [main] INFO  com.goibio.testcases.FlightBookingTest - Successfully Entered Destination Value
+21:36:19.982 [main] INFO  com.goibio.testcases.FlightBookingTest - Successfully Selected Depature Date
+21:36:21.637 [main] INFO  com.goibio.testcases.FlightBookingTest - Successfully EnteredSource Value
+21:36:22.006 [main] INFO  com.goibio.testcases.FlightBookingTest - Clicked on Search Button

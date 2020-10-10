@@ -2,19 +2,45 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="93389" started-at="2020-10-05T02:27:00Z" finished-at="2020-10-05T02:28:34Z">
+  <suite name="Suite" duration-ms="39495" started-at="2020-10-07T03:17:20Z" finished-at="2020-10-07T03:17:59Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="93389" started-at="2020-10-05T02:27:00Z" finished-at="2020-10-05T02:28:34Z">
+    <test name="Test" duration-ms="39495" started-at="2020-10-07T03:17:20Z" finished-at="2020-10-07T03:17:59Z">
       <class name="com.goibio.testcases.FlightBookingTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.FlightBookingTest@7225790e]" name="setup" is-config="true" duration-ms="31099" started-at="2020-10-04T19:27:00Z" finished-at="2020-10-04T19:27:31Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.FlightBookingTest@15761df8]" name="setup" is-config="true" duration-ms="23611" started-at="2020-10-06T20:17:21Z" finished-at="2020-10-06T20:17:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="flightbooking()[pri:0, instance:com.goibio.testcases.FlightBookingTest@7225790e]" name="flightbooking" duration-ms="62208" started-at="2020-10-04T19:27:31Z" finished-at="2020-10-04T19:28:34Z">
+        <test-method status="PASS" signature="flightbooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.goibio.testcases.FlightBookingTest@15761df8]" name="flightbooking" duration-ms="12982" started-at="2020-10-06T20:17:45Z" data-provider="getFlightData" finished-at="2020-10-06T20:17:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bengaluru (BLR)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mumbai (BOM)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7 October 2020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[11 October 2020]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightbooking -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.goibio.testcases.FlightBookingTest@15761df8]" name="teardown" is-config="true" duration-ms="1203" started-at="2020-10-06T20:17:58Z" finished-at="2020-10-06T20:17:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- com.goibio.testcases.FlightBookingTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

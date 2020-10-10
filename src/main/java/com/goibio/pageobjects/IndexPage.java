@@ -1,7 +1,6 @@
 package com.goibio.pageobjects;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,41 +14,40 @@ public class IndexPage {
 	PageBase pagebase;
 	
 	
-	String Scriptvaluescr="return document.getElementById(\"gosuggest_inputSrc\").value;";
-	String Scriptvaluedes="return document.getElementById(\"gosuggest_inputDest\").value;";
-	String DepartureDate="9 November 2020";
-	String ReturnDate="11 November 2020";
+	private String Scriptvaluescr="return document.getElementById(\"gosuggest_inputSrc\").value;";
+	private String Scriptvaluedes="return document.getElementById(\"gosuggest_inputDest\").value;";
+	
 	
 	@FindBy(xpath="//li[@class='active']/a")
-	WebElement filghts;
+	private WebElement filghts;
 	
 	@FindBy(css="[class='DayPicker-Caption']")
-	WebElement months;
+	private WebElement months;
 	
 	@FindBy(css="[class='DayPicker-NavButton DayPicker-NavButton--next']")
-	WebElement nextbtns;
+	private WebElement nextbtns;
 	
 	@FindBy(css="[class='calDate']")
-	List<WebElement> date;
+	private List<WebElement> date;
 	
 	
 	@FindBy(xpath="//span[@id='roundTrip']")
-	WebElement roundTrip;
+	private WebElement roundTrip;
 	
 	@FindBy(id="gosuggest_inputSrc")
-	WebElement source;
+	private WebElement source;
 	
 	@FindBy(id="gosuggest_inputDest")
-	WebElement dest;
+	private WebElement dest;
 	
 	@FindBy(id="departureCalendar")
-	WebElement depcalender;
+	private WebElement depcalender;
 		
 	@FindBy(id="returnCalendar")
-	WebElement returncal;
+	private WebElement returncal;
 	
 	@FindBy(id="gi_search_btn")
-	WebElement searchbtn;
+	private WebElement searchbtn;
 		
 	public IndexPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -57,6 +55,9 @@ public class IndexPage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	public String getGoibioTitle() {
+		return driver.getTitle();
+	}
 	public void clickOnFlights() throws InterruptedException
 	{
 		filghts.click();
@@ -69,30 +70,30 @@ public class IndexPage {
 	}
 	
 	
-	public void Enteringsource() throws InterruptedException {
+	public void Enteringsource(String srcvalue) throws InterruptedException {
 		pagebase=new PageBase(driver);
-		pagebase.AutosggestSource(source,"Delhi (DEL)",Scriptvaluescr);
+		pagebase.AutosggestSource(source,srcvalue,Scriptvaluescr);
 	}
 	
 	
-	public void EnteringDestination() throws InterruptedException {
+	public void EnteringDestination(String desvalue) throws InterruptedException {
 		pagebase=new PageBase(driver);
-		pagebase.AutosggestSource(dest,"Mumbai (BOM)",Scriptvaluedes);
+		pagebase.AutosggestSource(dest,desvalue,Scriptvaluedes);
 	}
 	
-	public void Selectdepaturedate() throws InterruptedException {
+	public void Selectdepaturedate(String DepartureDate) throws InterruptedException {
 		depcalender.click();
 		pagebase=new PageBase(driver);
 		pagebase.DatePicker(months,nextbtns,date,DepartureDate);
 	}
 	
-	public void Selectreturndate() throws InterruptedException {
+	public void Selectreturndate(String ReturnDate) throws InterruptedException {
 		returncal.click();
 		pagebase=new PageBase(driver);
 		pagebase.DatePicker(months,nextbtns,date,ReturnDate);
 	}
 	
-	public void ClickonSearchButton() throws InterruptedException {
+	public SearchResultPage ClickonSearchButton() throws InterruptedException {
 		searchbtn.click();
 		try {
 			String alertmsg = driver.findElement(By.xpath("//span[@class='status_cont red ico13']")).getText();
@@ -108,7 +109,8 @@ public class IndexPage {
 		}
 		catch (Exception e) {
 			System.out.println(e);			
-	      }		
+	      }
+		 return new SearchResultPage(driver);
 	}
 	
 }

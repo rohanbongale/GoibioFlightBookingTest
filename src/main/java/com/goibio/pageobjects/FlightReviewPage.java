@@ -1,8 +1,5 @@
 package com.goibio.pageobjects;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,49 +12,43 @@ public class FlightReviewPage {
 
 	public WebDriver driver;
 	WebDriverWait w;
-
-
 	
 	@FindBy(xpath="//button[@class='button orange col-md-3 fr large dF justifyCenter min37']")
-	WebElement ProceedBtn;
+	private WebElement ProceedBtn;
 	
 	@FindBy(xpath="//span[@class='ico16 quicks f700']")
-	WebElement ProceedToPayment;
+	private WebElement ProceedToPayment;
 	
 	@FindBy(xpath="//input[@id='risk-trip']")
-	WebElement RiskTrip;
+	private WebElement RiskTrip;
 	
 	@FindBy(xpath="//select[@id='Adulttitle1']")
-	WebElement ChoosingTitle;
+	private WebElement ChoosingTitle;
 	
 	@FindBy(id="AdultfirstName1")
-	WebElement Firstname;
+	private WebElement Firstname;
 	
 	@FindBy(id="AdultmiddleName1")
-	WebElement Middlename;
+	private WebElement Middlename;
 
 	@FindBy(id="AdultlastName1")
-	WebElement Lastname;
+	private WebElement Lastname;
 
 	@FindBy(id="email")
-	WebElement CustomerEmail;
+	private WebElement CustomerEmail;
 
 	@FindBy(id="mobile")
-	WebElement CustomerMnumber;
-
+	private WebElement CustomerMnumber;
 	
 	@FindBy(xpath="//input[@id='secure-trip']")
-	WebElement SecureTrip;
-	
-	
-	
+	private WebElement SecureTrip;
+			
 	public FlightReviewPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 	public void SelectSecureTravelProection() throws InterruptedException {
-		//Thread.sleep(30000l);
 		w=new WebDriverWait(driver,30);
 		w.until(ExpectedConditions.elementToBeClickable(SecureTrip));
 		SecureTrip.click();
@@ -67,33 +58,30 @@ public class FlightReviewPage {
 	public void SelectRiskTravelProection() {
 		RiskTrip.click();
 	}
-	
-	
-	public void EnteringTravellDetails() {
+		
+	public void EnteringTravellDetails(String title,String Fname,String Mname,
+			String Lname, String email,String MobNumber) 
+	{
 		Select s=new Select(ChoosingTitle);
-		s.selectByVisibleText("Mr");
-		//s.selectByValue("Mr");
-		//s.selectByIndex(2);
-		Firstname.sendKeys("Rohan");
-		Middlename.sendKeys("S");
-		Lastname.sendKeys("Bongale");
-		CustomerEmail.sendKeys("rohan@gmail.com");
+		s.selectByVisibleText(title);
+		Firstname.sendKeys(Fname);
+		Middlename.sendKeys(Mname);
+		Lastname.sendKeys(Lname);
+		CustomerEmail.sendKeys(email);
 		w=new WebDriverWait(driver,20);
 		w.until(ExpectedConditions.elementToBeClickable(CustomerMnumber));
-		CustomerMnumber.sendKeys("9945545567");				
+		CustomerMnumber.sendKeys(MobNumber);				
 	}
 	
-	public void clickOnProceedBtn() {
+	public FlightPaymentPage clickOnProceedBtn() {
 		ProceedBtn.click();
+		return new FlightPaymentPage(driver);
 	}
-	
-	
+		
 	public void clickOnProceedToPaymentBtn() {
 		w=new WebDriverWait(driver,20);
 		w.until(ExpectedConditions.elementToBeClickable(ProceedToPayment));
 		ProceedToPayment.click();
 	}
-	
-	
 	
 }

@@ -1,0 +1,5 @@
+21:36:24.572 [main] INFO  com.goibio.testcases.OnewayFlightBookingTest - Selected Amazon Pay Payment Method
+21:49:30.355 [main] INFO  com.goibio.testcases.OnewayFlightBookingTest - validating index PageTitle
+21:53:13.721 [main] INFO  com.goibio.testcases.OnewayFlightBookingTest - Successfully Entered Source Value
+21:53:19.457 [main] INFO  com.goibio.testcases.OnewayFlightBookingTest - Successfully Entered Destination Value
+21:55:28.514 [main] INFO  com.goibio.testcases.OnewayFlightBookingTest - Successfully Entered Source Value

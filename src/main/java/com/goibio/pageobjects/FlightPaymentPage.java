@@ -11,17 +11,15 @@ public class FlightPaymentPage {
 	
 	public WebDriver driver;
 	
-
-	
 	@FindBy(xpath="//div[@id='tab_wallet']")
-	WebElement wallet;
+	private WebElement wallet;
 	
 	@FindBy(xpath="//div[@id='walletPayNow']//div[@class='col-md-8 col-sm-8 col-xs-8']")
-	WebElement walletPayNow;
+	private WebElement walletPayNow;
 	
 	
 	@FindBy(xpath="//button[@class='button blue large fb padLR30']")
-	WebElement OkBtn;
+	private WebElement OkBtn;
 	
 	public FlightPaymentPage(WebDriver driver) {
 		this.driver=driver;

@@ -1,88 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="25657" started-at="2020-10-05T02:29:20Z" finished-at="2020-10-05T02:29:45Z">
+  <suite name="Default suite" duration-ms="80344" started-at="2020-10-10T02:32:08Z" finished-at="2020-10-10T02:33:29Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="25657" started-at="2020-10-05T02:29:20Z" finished-at="2020-10-05T02:29:45Z">
-      <class name="com.goibio.testcases.FlightBookingTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.FlightBookingTest@1593948d]" name="setup" is-config="true" duration-ms="21184" started-at="2020-10-04T19:29:20Z" finished-at="2020-10-04T19:29:41Z">
+    <test name="Default test" duration-ms="80344" started-at="2020-10-10T02:32:08Z" finished-at="2020-10-10T02:33:29Z">
+      <class name="com.goibio.testcases.RoundTripBookingTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="setup" is-config="true" duration-ms="17555" started-at="2020-10-09T19:32:08Z" finished-at="2020-10-09T19:32:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="flightbooking()[pri:0, instance:com.goibio.testcases.FlightBookingTest@1593948d]" name="flightbooking" duration-ms="4374" started-at="2020-10-04T19:29:41Z" finished-at="2020-10-04T19:29:45Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[chrome not reachable
-  (Session info: chrome=85.0.4183.121)
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: '123MM', ip: '192.168.160.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Users\1234\AppData\Local\Temp\scoped_dir2716_190758848}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=WINDOWS, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50036}, acceptInsecureCerts=false, browserVersion=85.0.4183.121, browserName=chrome, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true, webauthn:virtualAuthenticators=true}]
-Session ID: 0e3171224189a4d1b992fcafeda4f193
-*** Element info: {Using=xpath, value=//span[@id='roundTrip']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=85.0.4183.121)
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: '123MM', ip: '192.168.160.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Users\1234\AppData\Local\Temp\scoped_dir2716_190758848}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=WINDOWS, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50036}, acceptInsecureCerts=false, browserVersion=85.0.4183.121, browserName=chrome, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true, webauthn:virtualAuthenticators=true}]
-Session ID: 0e3171224189a4d1b992fcafeda4f193
-*** Element info: {Using=xpath, value=//span[@id='roundTrip']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at com.goibio.pageobjects.IndexPage.clickOnRoundTrip(IndexPage.java:68)
-	at com.goibio.testcases.FlightBookingTest.flightbooking(FlightBookingTest.java:34)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method status="PASS" signature="verifyingGoibioHomePageTitle()[pri:1, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="verifyingGoibioHomePageTitle" duration-ms="506" started-at="2020-10-09T19:32:26Z" finished-at="2020-10-09T19:32:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- flightbooking -->
-      </class> <!-- com.goibio.testcases.FlightBookingTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- verifyingGoibioHomePageTitle -->
+        <test-method status="PASS" signature="roundTripFlightBookingTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="roundTripFlightBookingTest" duration-ms="50266" started-at="2020-10-09T19:32:29Z" data-provider="getFlightData" finished-at="2020-10-09T19:33:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi (DEL)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mumbai (BOM)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[15 October 2020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[18 October 2020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- roundTripFlightBookingTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="teardown" is-config="true" duration-ms="9261" started-at="2020-10-09T19:33:19Z" finished-at="2020-10-09T19:33:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.goibio.testcases.RoundTripBookingTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

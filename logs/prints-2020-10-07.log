@@ -1,0 +1,6 @@
+18:06:09.217 [main] INFO  com.goibio.testcases.FlightBookingTest - Successfully EnteredSource Value
+18:06:09.927 [main] INFO  com.goibio.testcases.FlightBookingTest - Clicked on Search Button
+18:06:18.564 [main] INFO  com.goibio.testcases.FlightBookingTest - Clicked on Book Button
+18:06:21.183 [main] INFO  com.goibio.testcases.FlightBookingTest - Selected Secureravell Protection
+18:06:23.297 [main] INFO  com.goibio.testcases.FlightBookingTest - Entered Traveller Details
+18:06:23.596 [main] INFO  com.goibio.testcases.FlightBookingTest - Clicked on Procced Buton
