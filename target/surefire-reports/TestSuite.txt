@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 154.537 s - in TestSuite
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 150.736 s <<< FAILURE! - in TestSuite
+com.goibio.testcases.RoundTripBookingTest.roundTripFlightBookingTest[Delhi (DEL), Mumbai (BOM), 15 October 2020, 18 October 2020](1)  Time elapsed: 38.67 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button class="button orange col-md-3 fr large dF justifyCenter min37">...</button> is not clickable at point (824, 468). Other element would receive the click: <div class="popOverlay popShow"></div>
+  (Session info: chrome=86.0.4240.75)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: '123MM', ip: '192.168.160.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}), userDataDir=C:\Users\1234\AppData\Local\Temp\scoped_dir4100_1935583352}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=WINDOWS, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64910}, acceptInsecureCerts=false, browserVersion=86.0.4240.75, browserName=chrome, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1f3ad66aa250f1fb885095e7aba65cdb
+	at com.goibio.testcases.RoundTripBookingTest.roundTripFlightBookingTest(RoundTripBookingTest.java:72)
+

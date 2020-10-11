@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.goibio.testcases.RoundTripBookingTest" hash-for-method="roundTripFlightBookingTest(Delhi (DEL), Mumbai (BOM), 15 October 2020, 18 October 2020)">roundTripFlightBookingTest(Delhi (DEL), Mumbai (BOM), 15 October 2020, 18 October 2020)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +117,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.goibio.testcases.OnewayFlightBookingTest" hash-for-method="OnewayTripBookingTest(Delhi (DEL), Mumbai (BOM), 18 October 2020)">OnewayTripBookingTest(Delhi (DEL), Mumbai (BOM), 18 October 2020)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.goibio.testcases.RoundTripBookingTest" hash-for-method="roundTripFlightBookingTest(Delhi (DEL), Mumbai (BOM), 15 October 2020, 18 October 2020)">roundTripFlightBookingTest(Delhi (DEL), Mumbai (BOM), 15 October 2020, 18 October 2020)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -127,9 +136,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.goibio.testcases.RoundTripBookingTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -139,8 +148,37 @@
                   </a> <!-- roundTripFlightBookingTest(Delhi (DEL), Mumbai (BOM), 15 October 2020, 18 October 2020) -->
                   <span class="method-name">roundTripFlightBookingTest</span>
                   <span class="parameters">(Delhi (DEL), Mumbai (BOM), 15 October 2020, 18 October 2020)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;button orange col-md-3 fr large dF justifyCenter min37&quot;&gt;...&lt;/button&gt; is not clickable at point (824, 468). Other element would receive the click: &lt;div class=&quot;popOverlay popShow&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=86.0.4240.75)
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;123MM&apos;, ip: &apos;192.168.160.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}), userDataDir=C:\Users\1234\AppData\Local\Temp\scoped_dir4100_1935583352}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=WINDOWS, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64910}, acceptInsecureCerts=false, browserVersion=86.0.4240.75, browserName=chrome, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1f3ad66aa250f1fb885095e7aba65cdb
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy23.click(Unknown Source)
+	at com.goibio.pageobjects.FlightReviewPage.clickOnProceedBtn(FlightReviewPage.java:77)
+	at com.goibio.testcases.RoundTripBookingTest.roundTripFlightBookingTest(RoundTripBookingTest.java:72)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.goibio.testcases.RoundTripBookingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="verifyingGoibioHomePageTitle">
@@ -231,17 +269,17 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'roundTripFlightBookingTest')
-data.setCell(0, 2, 'com.goibio.testcases.RoundTripBookingTest')
-data.setCell(0, 3, 63081);
+data.setCell(0, 1, 'OnewayTripBookingTest')
+data.setCell(0, 2, 'com.goibio.testcases.OnewayFlightBookingTest')
+data.setCell(0, 3, 46794);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'OnewayTripBookingTest')
-data.setCell(1, 2, 'com.goibio.testcases.OnewayFlightBookingTest')
-data.setCell(1, 3, 44097);
+data.setCell(1, 1, 'roundTripFlightBookingTest')
+data.setCell(1, 2, 'com.goibio.testcases.RoundTripBookingTest')
+data.setCell(1, 3, 38356);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyingGoibioHomePageTitle')
 data.setCell(2, 2, 'com.goibio.testcases.RoundTripBookingTest')
-data.setCell(2, 3, 216);
+data.setCell(2, 3, 768);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -279,30 +317,32 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">OnewayTripBookingTest(Delhi (DEL), Mumbai (BOM), 18 October 2020)</span>
-                <span class="method-start">21851 ms</span>
+                <span class="method-start">29689 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">65956 ms</span>
+                <span class="method-start">76499 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.goibio.testcases.RoundTripBookingTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">69363 ms</span>
+                <span class="method-start">85925 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifyingGoibioHomePageTitle</span>
-                <span class="method-start">84958 ms</span>
+                <span class="method-start">105085 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">roundTripFlightBookingTest(Delhi (DEL), Mumbai (BOM), 15 October 2020, 18 October 2020)</span>
-                <span class="method-start">85390 ms</span>
+                <span class="method-start">105965 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">148471 ms</span>
+                <span class="method-start">144345 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

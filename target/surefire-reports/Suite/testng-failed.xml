@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test name="OnewayTrip Booking Test(failed)">
+    <classes>
+      <class name="com.goibio.testcases.RoundTripBookingTest">
+        <methods>
+          <include name="roundTripFlightBookingTest" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.goibio.testcases.RoundTripBookingTest -->
+    </classes>
+  </test> <!-- OnewayTrip Booking Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
