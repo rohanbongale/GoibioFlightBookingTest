@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="39495" started-at="2020-10-07T03:17:20Z" finished-at="2020-10-07T03:17:59Z">
+  <suite name="Suite" duration-ms="149924" started-at="2020-10-10T07:05:20Z" finished-at="2020-10-10T07:07:50Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="39495" started-at="2020-10-07T03:17:20Z" finished-at="2020-10-07T03:17:59Z">
-      <class name="com.goibio.testcases.FlightBookingTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.FlightBookingTest@15761df8]" name="setup" is-config="true" duration-ms="23611" started-at="2020-10-06T20:17:21Z" finished-at="2020-10-06T20:17:45Z">
+    <test name="RoundTrip Booking Test" duration-ms="69285" started-at="2020-10-10T07:05:20Z" finished-at="2020-10-10T07:06:30Z">
+      <class name="com.goibio.testcases.OnewayFlightBookingTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.OnewayFlightBookingTest@7c417213]" name="setup" is-config="true" duration-ms="16725" started-at="2020-10-10T00:05:20Z" finished-at="2020-10-10T00:05:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="flightbooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.goibio.testcases.FlightBookingTest@15761df8]" name="flightbooking" duration-ms="12982" started-at="2020-10-06T20:17:45Z" data-provider="getFlightData" finished-at="2020-10-06T20:17:58Z">
+        <test-method status="PASS" signature="OnewayTripBookingTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.goibio.testcases.OnewayFlightBookingTest@7c417213]" name="OnewayTripBookingTest" duration-ms="44097" started-at="2020-10-10T00:05:42Z" data-provider="getOnewayFlightData" finished-at="2020-10-10T00:06:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Bengaluru (BLR)]]>
+                <![CDATA[Delhi (DEL)]]>
               </value>
             </param>
             <param index="1">
@@ -25,23 +25,60 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[7 October 2020]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[11 October 2020]]>
+                <![CDATA[18 October 2020]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- flightbooking -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.goibio.testcases.FlightBookingTest@15761df8]" name="teardown" is-config="true" duration-ms="1203" started-at="2020-10-06T20:17:58Z" finished-at="2020-10-06T20:17:59Z">
+        </test-method> <!-- OnewayTripBookingTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.goibio.testcases.OnewayFlightBookingTest@7c417213]" name="teardown" is-config="true" duration-ms="3313" started-at="2020-10-10T00:06:26Z" finished-at="2020-10-10T00:06:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.goibio.testcases.FlightBookingTest -->
-    </test> <!-- Test -->
+      </class> <!-- com.goibio.testcases.OnewayFlightBookingTest -->
+    </test> <!-- RoundTrip Booking Test -->
+    <test name="OnewayTrip Booking Test" duration-ms="80545" started-at="2020-10-10T07:06:30Z" finished-at="2020-10-10T07:07:50Z">
+      <class name="com.goibio.testcases.RoundTripBookingTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.RoundTripBookingTest@add0edd]" name="setup" is-config="true" duration-ms="15587" started-at="2020-10-10T00:06:30Z" finished-at="2020-10-10T00:06:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyingGoibioHomePageTitle()[pri:1, instance:com.goibio.testcases.RoundTripBookingTest@add0edd]" name="verifyingGoibioHomePageTitle" duration-ms="216" started-at="2020-10-10T00:06:45Z" finished-at="2020-10-10T00:06:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingGoibioHomePageTitle -->
+        <test-method status="PASS" signature="roundTripFlightBookingTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.goibio.testcases.RoundTripBookingTest@add0edd]" name="roundTripFlightBookingTest" duration-ms="63081" started-at="2020-10-10T00:06:46Z" data-provider="getFlightData" finished-at="2020-10-10T00:07:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi (DEL)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mumbai (BOM)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[15 October 2020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[18 October 2020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- roundTripFlightBookingTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.goibio.testcases.RoundTripBookingTest@add0edd]" name="teardown" is-config="true" duration-ms="1437" started-at="2020-10-10T00:07:49Z" finished-at="2020-10-10T00:07:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.goibio.testcases.RoundTripBookingTest -->
+    </test> <!-- OnewayTrip Booking Test -->
   </suite> <!-- Suite -->
 </testng-results>
