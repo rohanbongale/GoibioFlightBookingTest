@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="80344" started-at="2020-10-10T02:32:08Z" finished-at="2020-10-10T02:33:29Z">
+  <suite name="Default suite" duration-ms="131642" started-at="2020-10-24T06:38:15Z" finished-at="2020-10-24T06:40:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="80344" started-at="2020-10-10T02:32:08Z" finished-at="2020-10-10T02:33:29Z">
+    <test name="Default test" duration-ms="131642" started-at="2020-10-24T06:38:15Z" finished-at="2020-10-24T06:40:26Z">
       <class name="com.goibio.testcases.RoundTripBookingTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="setup" is-config="true" duration-ms="17555" started-at="2020-10-09T19:32:08Z" finished-at="2020-10-09T19:32:26Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="setup" is-config="true" duration-ms="23973" started-at="2020-10-23T23:38:15Z" finished-at="2020-10-23T23:38:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyingGoibioHomePageTitle()[pri:1, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="verifyingGoibioHomePageTitle" duration-ms="506" started-at="2020-10-09T19:32:26Z" finished-at="2020-10-09T19:32:27Z">
+        <test-method status="PASS" signature="verifyingGoibioHomePageTitle()[pri:1, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="verifyingGoibioHomePageTitle" duration-ms="320" started-at="2020-10-23T23:38:39Z" finished-at="2020-10-23T23:38:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyingGoibioHomePageTitle -->
-        <test-method status="PASS" signature="roundTripFlightBookingTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="roundTripFlightBookingTest" duration-ms="50266" started-at="2020-10-09T19:32:29Z" data-provider="getFlightData" finished-at="2020-10-09T19:33:19Z">
+        <test-method status="PASS" signature="roundTripFlightBookingTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="roundTripFlightBookingTest" duration-ms="102362" started-at="2020-10-23T23:38:42Z" data-provider="getFlightData" finished-at="2020-10-23T23:40:25Z">
           <params>
             <param index="0">
               <value>
@@ -29,19 +29,19 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[15 October 2020]]>
+                <![CDATA[15 November 2020]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[18 October 2020]]>
+                <![CDATA[18 November 2020]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- roundTripFlightBookingTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="teardown" is-config="true" duration-ms="9261" started-at="2020-10-09T19:33:19Z" finished-at="2020-10-09T19:33:29Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.goibio.testcases.RoundTripBookingTest@d706f19]" name="teardown" is-config="true" duration-ms="1518" started-at="2020-10-23T23:40:25Z" finished-at="2020-10-23T23:40:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
