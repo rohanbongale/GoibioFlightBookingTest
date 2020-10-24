@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.goibio.testcases.OnewayFlightBookingTest">
+      <class name="com.goibio.testcases.RoundTripBookingTest">
         <methods>
+          <include name="roundTripFlightBookingTest" invocation-numbers="0"/>
+          <include name="verifyingGoibioHomePageTitle"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="OnewayTripBookingTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.goibio.testcases.OnewayFlightBookingTest -->
+      </class> <!-- com.goibio.testcases.RoundTripBookingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
